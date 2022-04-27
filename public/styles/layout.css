@@ -5,6 +5,8 @@
  */
 html {
   box-sizing: border-box;
+  margin-top: .3em;
+  margin-bottom: .3em;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -21,17 +23,29 @@ body {
   font-family: Source Sans Pro, Sans-Serif;
 }
 
-.logo {
-  font-family: Bungee, Sans-Serif;
-  position: absolute;
-  top: 1.5em;
-  left: 1.5em;
+.logoandgreeting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
-.tagline {
-  position: absolute;
-  top: 1.5em;
-  right: 1.5em;
+.logo {
+  font-family: Bungee, Sans-Serif;
+  font-size: 36px; 
+  margin-top: 24px;
+}
+
+.taglineicon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fa {
+  font-size: 28px !important;
 }
 
 /*

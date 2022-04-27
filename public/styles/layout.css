@@ -23,6 +23,15 @@ body {
 
 .logo {
   font-family: Bungee, Sans-Serif;
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em;
+}
+
+.tagline {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
 }
 
 /*

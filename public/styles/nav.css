@@ -5,5 +5,8 @@ nav {
   max-height: 120px;
   font-size: 24px;
   font-family: Source Sans Pro, Sans-Serif;
+  position: absolute;
+  top: 0;
+  width: 100%
 }
 

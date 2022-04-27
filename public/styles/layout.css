@@ -5,8 +5,6 @@
  */
 html {
   box-sizing: border-box;
-  margin-top: .3em;
-  margin-bottom: .3em;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -47,6 +45,7 @@ body {
 .fa {
   font-size: 28px !important;
 }
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

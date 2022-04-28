@@ -24,7 +24,9 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <body>
     <!-- Top nav bar (fixed) -->
@@ -50,7 +52,9 @@
     <main class="container">
       <section class="new-tweet">
         <form action="/tweets" method="post">
-          <input name="text" id="tweet-text" placeholder="What are you humming about?" maxlength="140"></input>
+          <textarea maxlength='140' placeholder="What are you humming about?"></textarea>
+          <!-- <input name="text" id="tweet-text" placeholder="What are you humming about?" maxlength="140"></input> -->
+        </textarea>
           <div> 
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>

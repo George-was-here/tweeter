@@ -9,6 +9,5 @@ $(document).ready(function() {
     //setting new value for counter below.
     $('#counterIcon').val(140 - currentLength);
     console.log(maxlength - currentLength + " chars left");
-
   });
 });

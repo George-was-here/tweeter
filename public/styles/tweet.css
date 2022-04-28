@@ -1,5 +1,6 @@
 article {
   padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .tweet {
@@ -17,6 +18,10 @@ article {
   justify-content: space-between;
   padding-bottom: 10px;
   margin-top: 0;
+}
+
+.tweet:hover {
+  box-shadow: 20px 20px;
 }
 
 .userinfo span {

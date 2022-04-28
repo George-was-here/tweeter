@@ -16,6 +16,18 @@ article {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
+  margin-top: 0;
+}
+
+.userinfo span {
+  display: flex;
+  flex-direction: row;
+
+}
+
+article img {
+  max-width: 12%;
+  height:auto;
 }
 
 .handle {
@@ -38,16 +50,10 @@ article p {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  font-size: 10px;
   padding-bottom: 1px;
 }
 
-footer span {
-  display: flex;
-  flex-direction: row;
-  align-items: left;
-  font-size: 10px;
-  margin-bottom: 2px;
-} 
 
 
 

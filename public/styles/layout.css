@@ -54,6 +54,10 @@ body {
   background-color: #f4f1ec;
 }
 
+.red-text {
+  color:firebrick;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

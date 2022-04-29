@@ -49,7 +49,16 @@ article p {
   /* align-items: right; */
   /* justify-content: flex-end; */
   margin-bottom: 0px;
+  color:#4056A1;
 } 
+
+#actionicon {
+  padding: .2em;
+}
+
+#actionicon:hover {
+  color:darkgoldenrod;
+}
 
 .bottomoftweet {
   display: flex;

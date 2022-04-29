@@ -14,6 +14,8 @@ const renderTweets = function(tweets) {
     // takes return value and appends it to the tweets container
 }
 
+
+
 const createTweetElement = function(tweetData) {
   const $tweet = $(`      
 <article>

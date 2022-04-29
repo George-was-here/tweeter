@@ -50,7 +50,7 @@
   </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main id="tweets-container">
       <section class="new-tweet">
         <form action="/tweets" method="post">
           <textarea placeholder="What are you humming about?"></textarea>
@@ -67,7 +67,7 @@
         <section class="tweet">
         <header>
           <div class=userinfo>
-            <span><img src="/images/profile-hex.png"> Newton</span>
+            <span class="userName"><img class="useravatar" src="/images/profile-hex.png"> Newton</span>
             <span class="handle">@SirIsaac</span>
           </div>
         </header>
@@ -79,7 +79,7 @@
           <i class="fa-solid fa-retweet" id="actionicon" style="font-size:14px;"></i>
           <i class="fa-solid fa-heart" id="actionicon" style="font-size:14px;"></i>
           </aside>
-          <span>10 days ago</span>
+          <span class="datecreated">10 days ago</span>
           </div>
         </footer>
       </section>

@@ -37,6 +37,10 @@ body {
   width: 100%; /* Full width */
 }
 
+.main {
+  margin-bottom: 30px; 
+}
+
 .logo {
   font-family: Bungee, Sans-Serif;
   font-size: 36px; 
@@ -53,7 +57,7 @@ body {
   font-size: 28px !important;
 }
 
-.container {
+#tweets-container {
   width: 90%;
   align-self: center;
   background-color: #f4f1ec;

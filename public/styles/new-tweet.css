@@ -43,3 +43,21 @@
   font-family: Bungee, Sans-Serif;
 
 }
+
+.error {
+  background-color: lightcoral;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 25px;
+  display: none;
+}
+
+.error span {
+  align-self:  center;
+  text-align: center;
+  color: white;
+}

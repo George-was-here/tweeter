@@ -18,18 +18,21 @@ $(document).ready(() => {
 
   //Event handler for submit function
 $("#tweet-text").submit(function( event ) {
+  $('#errorContainer').slideUp()
   event.preventDefault();
 
   const text = String($( this ).serialize()).replace("text=", "").replaceAll('%20', " ");
 
   // if text is not present
   if(text === '') {
-    alert('You cannot tweet nothingness, please enter a tweet!');
+    $('#errorContainer').slideDown();
+    $("#errorText").text($("#errorText").text().replace("", "You cannot tweet nothingness, please enter a tweet!"));
     return;
   }
 
   if(text.length > 140) {
-    alert('Please edit tweet size below 140 characters.');
+    $('#errorContainer').slideDown();
+    $("#errorText").text($("#errorText").text().replace("", "Please edit tweet size below 140 characters."));
     return;
   }
 

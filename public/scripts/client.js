@@ -7,7 +7,7 @@ $(document).ready(() => {
 
   const renderTweets = (tweets) => {
   //loop through each element of the tweets
-  $('#tweets-container').empty();
+    $('#tweets-container').empty();
     tweets.forEach(element => {
       $('#tweets-container').append(createTweetElement(element));
     });
@@ -17,36 +17,36 @@ $(document).ready(() => {
   };
 
   //Event handler for submit function
-$("#tweet-text").submit(function( event ) {
-  $('#errorContainer').slideUp()
-  event.preventDefault();
+  $("#tweet-text").submit(function(event) {
+    $('#errorContainer').slideUp();
+    event.preventDefault();
 
-  const text = String($( this ).serialize()).replace("text=", "").replaceAll('%20', " ");
+    const text = String($(this).serialize()).replace("text=", "").replaceAll('%20', " ");
 
-  // if text is not present
-  if(text === '') {
-    $('#errorContainer').slideDown();
-    $("#errorText").text($("#errorText").text().replace("", "You cannot tweet nothingness, please enter a tweet!"));
-    return;
-  }
+    // if text is not present
+    if (text === '') {
+      $('#errorContainer').slideDown();
+      $("#errorText").text($("#errorText").text().replace("", "You cannot tweet nothingness, please enter a tweet!"));
+      return;
+    }
 
-  if(text.length > 140) {
-    $('#errorContainer').slideDown();
-    $("#errorText").text($("#errorText").text().replace("", "Please edit tweet size below 140 characters."));
-    return;
-  }
+    if (text.length > 140) {
+      $('#errorContainer').slideDown();
+      $("#errorText").text($("#errorText").text().replace("", "Please edit tweet size below 140 characters."));
+      return;
+    }
 
-  $.post('/tweets',{text}, () => {
-    loadTweets();
+    $.post('/tweets',{text}, () => {
+      loadTweets();
+    });
   });
-});
 
 
-const loadTweets = function(){
-  $.get("/tweets", function(data) {
-    renderTweets(data.reverse());
-  });
-}
+  const loadTweets = function() {
+    $.get("/tweets", function(data) {
+      renderTweets(data.reverse());
+    });
+  };
 
   const createTweetElement = function(tweetData) {
     const $tweet = $(`      
@@ -66,7 +66,7 @@ const loadTweets = function(){
   <i class="fa-solid fa-retweet" id="actionicon" style="font-size:14px;"></i>
   <i class="fa-solid fa-heart" id="actionicon" style="font-size:14px;"></i>
   </aside>
-  <span class="datecreated">${timeago.format( tweetData.created_at)}</span>
+  <span class="datecreated">${timeago.format(tweetData.created_at)}</span>
   </div>
 </footer>
 </section>

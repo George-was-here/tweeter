@@ -16,15 +16,22 @@ $(document).ready(() => {
   // takes return value and appends it to the tweets container
   };
 
-  
   //Event handler for submit function
 $("#tweet-text").submit(function( event ) {
   event.preventDefault();
 
-  const text = String($( this ).serialize()).replace("text=", "");
+  const text = String($( this ).serialize()).replace("text=", "").replaceAll('%20', " ");
 
   $.post('/tweets',{text});
+  loadTweets();
 });
+
+
+const loadTweets = function(){
+  $.get("/tweets", function(data) {
+    renderTweets(data);
+  });
+}
 
   const createTweetElement = function(tweetData) {
     const $tweet = $(`      
@@ -44,7 +51,7 @@ $("#tweet-text").submit(function( event ) {
   <i class="fa-solid fa-retweet" id="actionicon" style="font-size:14px;"></i>
   <i class="fa-solid fa-heart" id="actionicon" style="font-size:14px;"></i>
   </aside>
-  <span class="datecreated">${tweetData.created_at}</span>
+  <span class="datecreated">${timeago.format( tweetData.created_at)}</span>
   </div>
 </footer>
 </section>
@@ -53,33 +60,9 @@ $("#tweet-text").submit(function( event ) {
     return $tweet;
   };
 
-  // Test / driver code (temporary). Eventually will get this from the server.
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
+  loadTweets();
 
-  renderTweets(data);
+  
 
   // const $tweet = createTweetElement(tweetData);
 

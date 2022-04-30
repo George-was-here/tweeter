@@ -1,5 +1,3 @@
-console.log("-------------COMPOSER-CHAR-COUNTER TEST");
-
 $(document).ready(function() {
   $('textarea').on("input", function() {
     let currentLength = $(this).val().length;

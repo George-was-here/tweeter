@@ -22,14 +22,26 @@ $("#tweet-text").submit(function( event ) {
 
   const text = String($( this ).serialize()).replace("text=", "").replaceAll('%20', " ");
 
-  $.post('/tweets',{text});
-  loadTweets();
+  // if text is not present
+  if(text === '') {
+    alert('You cannot tweet nothingness, please enter a tweet!');
+    return;
+  }
+
+  if(text.length > 140) {
+    alert('Please edit tweet size below 140 characters.');
+    return;
+  }
+
+  $.post('/tweets',{text}, () => {
+    loadTweets();
+  });
 });
 
 
 const loadTweets = function(){
   $.get("/tweets", function(data) {
-    renderTweets(data);
+    renderTweets(data.reverse());
   });
 }
 

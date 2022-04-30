@@ -50,12 +50,10 @@
   </header>
 
     <!-- Page-specific (main) content here -->
-    <main id="tweets-container">
+    <main>
       <section class="new-tweet">
-        <form action="/tweets" method="post">
-          <textarea placeholder="What are you humming about?"></textarea>
-          <!-- <input name="text" id="tweet-text" placeholder="What are you humming about?" maxlength="140"></input> -->
-        </textarea>
+        <form action="/tweets" method="post"  id="tweet-text">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
           <div> 
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text" id="counterIcon">140</output>
@@ -63,7 +61,7 @@
         </form>
       </section>
       <!-- Tweet Element below -->
-      <article>
+      <article id="tweets-container">
         <section class="tweet">
         <header>
           <div class=userinfo>

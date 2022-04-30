@@ -11,12 +11,20 @@ $(document).ready(() => {
     tweets.forEach(element => {
       $('#tweets-container').append(createTweetElement(element));
     });
-    // loops through tweets loop through array
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
+  // loops through tweets loop through array
+  // calls createTweetElement for each tweet
+  // takes return value and appends it to the tweets container
   };
 
+  
+  //Event handler for submit function
+$("#tweet-text").submit(function( event ) {
+  event.preventDefault();
 
+  const text = String($( this ).serialize()).replace("text=", "");
+
+  $.post('/tweets',{text});
+});
 
   const createTweetElement = function(tweetData) {
     const $tweet = $(`      
@@ -45,7 +53,6 @@ $(document).ready(() => {
     return $tweet;
   };
 
-
   // Test / driver code (temporary). Eventually will get this from the server.
   const data = [
     {
@@ -73,7 +80,6 @@ $(document).ready(() => {
   ];
 
   renderTweets(data);
-
 
   // const $tweet = createTweetElement(tweetData);
 

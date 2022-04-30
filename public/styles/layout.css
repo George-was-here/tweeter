@@ -36,8 +36,10 @@ body {
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
 }
-
-.main {
+main {
+  width: 90%;
+  align-self: center;
+  background-color: #f4f1ec;
   margin-bottom: 30px; 
 }
 
@@ -57,7 +59,7 @@ body {
   font-size: 28px !important;
 }
 
-#tweets-container {
+.container {
   width: 90%;
   align-self: center;
   background-color: #f4f1ec;

@@ -21,7 +21,7 @@ article {
 }
 
 .tweet:hover {
-  box-shadow: 20px 20px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
 .userinfo span {
@@ -42,12 +42,11 @@ article img {
 article p {
   border-bottom: 4px solid #545149;
   padding-bottom: 18px;
+  overflow-x: scroll;
 }
 
  footer aside {
   display: flex;
-  /* align-items: right; */
-  /* justify-content: flex-end; */
   margin-bottom: 0px;
   color:#4056A1;
 } 

@@ -17,13 +17,14 @@ html {
 
 body {
   display: flex;
-  flex-direction: column;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: Source Sans Pro, Sans-Serif;
+
 }
 
+/*header*/
 .logoandgreeting {
   display: flex;
   flex-direction: row;
@@ -36,11 +37,31 @@ body {
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
 }
+
 main {
   width: 90%;
   align-self: center;
   background-color: #f4f1ec;
   margin-bottom: 30px; 
+}
+
+
+@media only screen and (min-width: 768px) {
+  body {
+    flex-direction: row;
+  }
+
+  main {
+    width: 60%;
+    padding: 5em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+
+  }
 }
 
 .logo {
@@ -68,7 +89,3 @@ main {
 .red-text {
   color:firebrick;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

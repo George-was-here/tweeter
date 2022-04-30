@@ -38,11 +38,12 @@ $(document).ready(() => {
 
     $.post('/tweets',{text}, () => {
       loadTweets();
+      $("#textarea-tweet").val("");
+      $("#textarea-tweet").trigger('input');
     });
   });
 
-
-  const loadTweets = function() {
+  const loadTweets = () => {
     $.get("/tweets", function(data) {
       renderTweets(data.reverse());
     });

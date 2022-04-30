@@ -7,6 +7,7 @@ $(document).ready(() => {
 
   const renderTweets = (tweets) => {
   //loop through each element of the tweets
+  $('#tweets-container').empty();
     tweets.forEach(element => {
       $('#tweets-container').append(createTweetElement(element));
     });
